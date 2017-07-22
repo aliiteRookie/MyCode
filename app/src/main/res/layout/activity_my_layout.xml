@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<com.example.free.mymvpdemo.MyLayout -->
+	<!--xmlns:android="http://schemas.android.com/apk/res/android"  -->
+	<!--    xmlns:tools="http://schemas.android.com/tools"  -->
+	<!--    android:id="@+id/my_layout"  -->
+	<!--    android:layout_width="match_parent"  -->
+	<!--    android:layout_height="match_parent"  -->
+	<!--    android:orientation="vertical" >  -->
+	<!--  -->
+	<!--    <Button  -->
+	<!--        android:id="@+id/button1"  -->
+	<!--        android:layout_width="match_parent"  -->
+	<!--        android:layout_height="wrap_content"  -->
+	<!--        android:text="Button1" />  -->
+	<!--  -->
+	<!--    <Button  -->
+	<!--        android:id="@+id/button2"  -->
+	<!--        android:layout_width="match_parent"  -->
+	<!--        android:layout_height="wrap_content"  -->
+	<!--        android:text="Button2" />-->
+	<!--</ccom.example.free.mymvpdemo.MyLayout>-->
+<com.example.free.mymvpdemo.MyLayout android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/my_layout"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	>
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/button1"
+		android:text="button1"/>
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/button2"
+		android:text="button2"
+		/>
+	</com.example.free.mymvpdemo.MyLayout>
