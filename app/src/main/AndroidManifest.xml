@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyLayoutActivity" />
-        <activity android:name=".PicassoActivity" />
-        <activity android:name=".RecyclerViewActivity"></activity>
+        <activity android:name=".ui.MyLayoutActivity" />
+        <activity android:name=".ui.PicassoActivity" />
+        <activity android:name=".ui.RecyclerViewActivity"></activity>
+        <activity android:name=".ui.StaggeredGridLayoutActivity"></activity>
     </application>
 
 </manifest>

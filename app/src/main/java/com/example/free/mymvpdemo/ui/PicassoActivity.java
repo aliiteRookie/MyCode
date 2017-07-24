@@ -1,10 +1,11 @@
-package com.example.free.mymvpdemo;
+package com.example.free.mymvpdemo.ui;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.example.free.mymvpdemo.R;
 import com.squareup.picasso.Picasso;
 
 public class PicassoActivity extends AppCompatActivity {

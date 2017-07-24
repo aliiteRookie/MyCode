@@ -1,4 +1,4 @@
-package com.example.free.mymvpdemo;
+package com.example.free.mymvpdemo.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.view.MyLayout;
 
 import java.util.HashMap;

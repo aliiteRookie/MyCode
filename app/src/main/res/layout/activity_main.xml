@@ -14,13 +14,18 @@
         android:layout_height="wrap_content"
         android:text="点击进入Picasso"
         android:id="@+id/button_picasso"
-        />oid:id="@+id/button_enter_layout"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点击进入RecyclerView页面"
         android:id="@+id/button_recyclerview"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击进入瀑布流"
+        android:id="@+id/button_waterfall"
         />
 
 </LinearLayout>
