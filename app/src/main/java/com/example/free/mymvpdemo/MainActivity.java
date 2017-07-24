@@ -10,9 +10,9 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
     private Button enterLayout;
     private Button enterPicasso;
+    private Button enterRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         enterLayout = ((Button) findViewById(R.id.button_enter_layout));
         enterPicasso = ((Button) findViewById(R.id.button_picasso));
+        enterRecyclerView = ((Button) findViewById(R.id.button_recyclerview));
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
-
-//        //设置adapter
-//        mRecyclerView.setAdapter(adapter);
-//
-//        //设置Item增加、移除动画
-//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         enterLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,5 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PicassoActivity.class));
             }
         });
+        enterRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+            }
+        });
+
     }
 }

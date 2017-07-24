@@ -7,6 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.free.mymvpdemo.view.MyLayout;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;

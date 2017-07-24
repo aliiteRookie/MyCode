@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<com.example.free.mymvpdemo.MyLayout -->
+<!--<com.example.free.mymvpdemo.view.MyLayout -->
 	<!--xmlns:android="http://schemas.android.com/apk/res/android"  -->
 	<!--    xmlns:tools="http://schemas.android.com/tools"  -->
 	<!--    android:id="@+id/my_layout"  -->
@@ -19,7 +19,7 @@
 	<!--        android:layout_height="wrap_content"  -->
 	<!--        android:text="Button2" />-->
 	<!--</ccom.example.free.mymvpdemo.MyLayout>-->
-<com.example.free.mymvpdemo.MyLayout android:layout_width="match_parent"
+<com.example.free.mymvpdemo.view.MyLayout android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:id="@+id/my_layout"
 	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,4 +36,4 @@
 		android:id="@+id/button2"
 		android:text="button2"
 		/>
-	</com.example.free.mymvpdemo.MyLayout>
+	</com.example.free.mymvpdemo.view.MyLayout>

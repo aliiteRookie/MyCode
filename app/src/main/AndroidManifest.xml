@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyLayoutActivity" />
-        <activity android:name=".PicassoActivity"></activity>
+        <activity android:name=".PicassoActivity" />
+        <activity android:name=".RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

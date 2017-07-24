@@ -14,10 +14,14 @@
         android:layout_height="wrap_content"
         android:text="点击进入Picasso"
         android:id="@+id/button_picasso"
+        />oid:id="@+id/button_enter_layout"
         />
-    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id = "@+id/recyclerview"
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击进入RecyclerView页面"
+        android:id="@+id/button_recyclerview"
         />
+
 </LinearLayout>
 
