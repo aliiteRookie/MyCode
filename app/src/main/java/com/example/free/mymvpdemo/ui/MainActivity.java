@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, StaggeredGridLayoutActivity.class));
             }
         });
+        findViewById(R.id.enter_handler).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HandlerActivity.class));
+            }
+        });
 
     }
 }

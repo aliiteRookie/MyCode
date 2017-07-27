@@ -27,6 +27,12 @@
         android:text="点击进入瀑布流"
         android:id="@+id/button_waterfall"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="handler处理"
+        android:id="@+id/enter_handler"
+        />
 
 </LinearLayout>
 
