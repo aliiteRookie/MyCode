@@ -33,6 +33,12 @@
         android:text="handler处理"
         android:id="@+id/enter_handler"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="service处理"
+        android:id="@+id/serviceControl"
+        />
 
 </LinearLayout>
 

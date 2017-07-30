@@ -21,7 +21,15 @@
         <activity android:name=".ui.RecyclerViewActivity" />
         <activity android:name=".ui.StaggeredGridLayoutActivity" />
         <activity android:name=".ui.HandlerActivity" />
-        <activity android:name=".ui.BaseActivity"></activity>
+        <activity android:name=".ui.BaseActivity" />
+        <activity android:name=".ui.MyService" />
+
+        <service
+            android:name=".ui.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.ServiceActivity"></activity>
     </application>
 
 </manifest>

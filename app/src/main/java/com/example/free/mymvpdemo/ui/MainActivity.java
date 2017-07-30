@@ -1,19 +1,40 @@
 package com.example.free.mymvpdemo.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.free.mymvpdemo.R;
+import com.example.free.mymvpdemo.helper.Nav;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class MainActivity extends BaseActivity {
+
+    @BindView(R.id.button_enter_layout)
+    Button buttonEnterLayout;
+    @BindView(R.id.button_picasso)
+    Button buttonPicasso;
+    @BindView(R.id.button_recyclerview)
+    Button buttonRecyclerview;
+    @BindView(R.id.button_waterfall)
+    Button buttonWaterfall;
+    @BindView(R.id.enter_handler)
+    Button enterHandler;
+    @BindView(R.id.serviceControl)
+    Button serviceControl;
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
 
         findViewById(R.id.button_enter_layout).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,4 +68,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @OnClick(R.id.serviceControl)
+    public void serViceControl() {
+        Nav.toServiceActivity(this);
+    }
+
 }
