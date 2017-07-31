@@ -1,4 +1,4 @@
-package com.example.free.mymvpdemo.ui;
+package com.example.free.mymvpdemo.manager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -3,6 +3,7 @@ package com.example.free.mymvpdemo.service;
 import android.app.Service;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.IntDef;
 import android.util.Log;
@@ -11,6 +12,7 @@ import com.blankj.utilcode.util.LogUtils;
 
 public class MyService extends Service {
 
+    public MyBinder myBinder = new MyBinder();
     public static boolean isBind = false; //查看本Service是否是绑定状态
 
     public MyService() {
@@ -27,7 +29,7 @@ public class MyService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         LogUtils.e("onBind");
-        return null;
+        return myBinder;
     }
 
     @Override
@@ -62,5 +64,12 @@ public class MyService extends Service {
     public void onDestroy() {
         super.onDestroy();
         LogUtils.e("onDestroy() executed");
+    }
+
+    public class MyBinder extends Binder {
+
+        public void startDownload() {
+            LogUtils.e("startDownload execute");
+        }
     }
 }

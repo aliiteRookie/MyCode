@@ -2,8 +2,6 @@ package com.example.free.mymvpdemo.manager;
 
 import android.app.Application;
 
-import butterknife.internal.Utils;
-
 /**
  * Created by free on 2017/7/31.
  */

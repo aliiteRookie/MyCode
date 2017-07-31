@@ -10,12 +10,15 @@ import android.widget.TextView;
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.helper.Nav;
+import com.example.free.mymvpdemo.manager.BaseActivity;
 import com.example.free.mymvpdemo.service.MyService;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
 public class ServiceActivity1 extends BaseActivity {
+
+    private MyService.MyBinder myBinder;
 
     @BindView(R.id.textView)
     TextView textView;
@@ -62,6 +65,9 @@ public class ServiceActivity1 extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             LogUtils.e("componentName:" + name + ", service:" + service);
+            myBinder =(MyService.MyBinder)service;
+            myBinder.startDownload();
+
         }
 
         @Override

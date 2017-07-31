@@ -1,23 +1,21 @@
 package com.example.free.mymvpdemo.ui;
 
 import android.content.ComponentName;
-import android.content.Intent;
 import android.content.ServiceConnection;
-import android.os.Bundle;
 import android.os.IBinder;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.helper.Nav;
-import com.example.free.mymvpdemo.service.MyService;
+import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * 测试多个activity启动同一个Service出现的问题
+ */
 public class ServiceActivity2 extends BaseActivity {
 
     @BindView(R.id.start_service)

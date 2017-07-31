@@ -3,16 +3,13 @@
     package="com.example.free.mymvpdemo">
 
     <application
+        android:name=".manager.CodeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".manager.CodeApplication"
-        >
-
-
+        android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,19 +22,20 @@
         <activity android:name=".ui.RecyclerViewActivity" />
         <activity android:name=".ui.StaggeredGridLayoutActivity" />
         <activity android:name=".ui.HandlerActivity" />
-        <activity android:name=".ui.BaseActivity" />
-        <activity android:name=".ui.ServiceActivity1"/>
-        <activity android:name=".ui.ServiceActivity2"
+        <activity android:name=".manager.BaseActivity" />
+        <activity android:name=".ui.ServiceActivity1" />
+        <activity
+            android:name=".ui.ServiceActivity2"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/noAnimationTheme"
-            />
-
+            android:theme="@style/noAnimationTheme" />
 
         <service
             android:name=".service.MyService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity android:name=".ui.JNIActivity"></activity>
     </application>
 
 </manifest>

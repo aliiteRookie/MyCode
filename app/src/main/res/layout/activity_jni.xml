@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.free.mymvpdemo.manager.BaseActivity">
+    tools:context="com.example.free.mymvpdemo.ui.JNIActivity">
 
 </android.support.constraint.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
+import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
