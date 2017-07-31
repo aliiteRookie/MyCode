@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
+import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.service.MyService;
 
 import butterknife.BindView;
@@ -18,8 +19,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ServiceActivity2 extends BaseActivity {
-
-    private boolean isBind;
 
     @BindView(R.id.start_service)
     Button startService;
@@ -37,19 +36,19 @@ public class ServiceActivity2 extends BaseActivity {
 
     @OnClick(R.id.start_service)
     public void startService() {
-        startService(new Intent(ServiceActivity2.this, MyService.class));
+        Nav.startMyService(ServiceActivity2.this);
     }
 
 
     @OnClick(R.id.stop_service)
     public void stopService() {
-        stopService(new Intent(ServiceActivity2.this, MyService.class));
+        Nav.stopMyService(ServiceActivity2.this);
     }
 
 
     @OnClick(R.id.bind_service)
     public void bindService() {
-        isBind = bindService(new Intent(ServiceActivity2.this, MyService.class), serviceConnection, BIND_AUTO_CREATE);
+        MyService.isBind = Nav.bindMyService(ServiceActivity2.this, serviceConnection);
     }
 
     ServiceConnection serviceConnection = new ServiceConnection() {
@@ -66,14 +65,15 @@ public class ServiceActivity2 extends BaseActivity {
 
     @OnClick(R.id.unbind_service)
     public void unBindService() {
-        if (isBind)
-            unbindService(serviceConnection);
+        if (MyService.isBind){
+            Nav.unBindMyService(ServiceActivity2.this, serviceConnection);
+        }
     }
 
     @Override
     protected void onDestroy() {
         LogUtils.e("onDestroy");
         super.onDestroy();
-        unbindService(serviceConnection);
+        Nav.unBindMyService(ServiceActivity2.this, serviceConnection);
     }
 }

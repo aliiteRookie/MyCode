@@ -1,7 +1,6 @@
 package com.example.free.mymvpdemo.ui;
 
 import android.content.ComponentName;
-import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.view.View;
@@ -10,16 +9,17 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.example.free.mymvpdemo.R;
+import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.service.MyService;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class ServiceActivity extends BaseActivity {
+public class ServiceActivity1 extends BaseActivity {
 
     @BindView(R.id.textView)
     TextView textView;
-    private boolean isBind;
+
 
     @BindView(R.id.start_service)
     Button startService;
@@ -42,19 +42,19 @@ public class ServiceActivity extends BaseActivity {
 
     @OnClick(R.id.start_service)
     public void startService() {
-        startService(new Intent(ServiceActivity.this, MyService.class));
+        Nav.startMyService(ServiceActivity1.this);
     }
 
 
     @OnClick(R.id.stop_service)
     public void stopService() {
-        stopService(new Intent(ServiceActivity.this, MyService.class));
+        Nav.stopMyService(ServiceActivity1.this);
     }
 
 
     @OnClick(R.id.bind_service)
     public void bindService() {
-        isBind = bindService(new Intent(ServiceActivity.this, MyService.class), serviceConnection, BIND_AUTO_CREATE);
+        MyService.isBind = Nav.bindMyService(ServiceActivity1.this, serviceConnection);
     }
 
     ServiceConnection serviceConnection = new ServiceConnection() {
@@ -71,13 +71,13 @@ public class ServiceActivity extends BaseActivity {
 
     @OnClick(R.id.unbind_service)
     public void unBindService() {
-        if (isBind) {
-            unbindService(serviceConnection);
+        if (MyService.isBind) {
+            Nav.unBindMyService(ServiceActivity1.this, serviceConnection);
         }
     }
 
 
     public void jumpAnotherActivity(View view) {
-        startActivity(new Intent(this, ServiceActivity2.class));
+        Nav.toServiceActivity2(this);
     }
 }

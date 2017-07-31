@@ -24,7 +24,7 @@
         <activity android:name=".ui.StaggeredGridLayoutActivity" />
         <activity android:name=".ui.HandlerActivity" />
         <activity android:name=".ui.BaseActivity" />
-        <activity android:name=".ui.ServiceActivity"/>
+        <activity android:name=".ui.ServiceActivity1"/>
         <activity android:name=".ui.ServiceActivity2"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"

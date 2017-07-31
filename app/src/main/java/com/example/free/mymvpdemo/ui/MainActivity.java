@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.serviceControl)
     public void serViceControl() {
-        Nav.toServiceActivity(this);
+        Nav.toServiceActivity1(this);
     }
 
 }

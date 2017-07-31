@@ -11,6 +11,8 @@ import com.blankj.utilcode.util.LogUtils;
 
 public class MyService extends Service {
 
+    public static boolean isBind = false;
+
     public MyService() {
         LogUtils.e("constructor MyService");
     }
@@ -34,10 +36,12 @@ public class MyService extends Service {
         super.onRebind(intent);
     }
 
+
     @Override
     public boolean onUnbind(Intent intent) {
-        LogUtils.e("onUnbind");
-        return super.onUnbind(intent);
+        LogUtils.e("super.onUnbind(intent):" + super.onUnbind(intent) + ", onUnbind");
+        return true;  //为了演示onRebind方法，具体见 [onRebind什么时候使用]:http://blog.csdn.net/qq_29781403/article/details/76458502
+//        return super.onUnbind(intent);
     }
 
     @Override
@@ -59,7 +63,4 @@ public class MyService extends Service {
         super.onDestroy();
         LogUtils.e("onDestroy() executed");
     }
-
-
-
 }
