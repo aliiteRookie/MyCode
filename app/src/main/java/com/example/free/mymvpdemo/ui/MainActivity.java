@@ -26,6 +26,8 @@ public class MainActivity extends BaseActivity {
     Button enterHandler;
     @BindView(R.id.serviceControl)
     Button serviceControl;
+    @BindView(R.id.aidl_control)
+    Button aidlControl;
 
     @Override
     protected int getLayoutId() {
@@ -73,6 +75,11 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.serviceControl)
     public void serViceControl() {
         Nav.toServiceActivity1(this);
+    }
+
+    @OnClick(R.id.aidl_control)
+    public void aidlControl() {
+        Nav.toAIDLActivity(this);
     }
 
 }

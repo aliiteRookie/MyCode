@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.example.free.mymvpdemo.service.AIDLService;
 import com.example.free.mymvpdemo.service.MyService;
+import com.example.free.mymvpdemo.ui.AIDLActivity;
 import com.example.free.mymvpdemo.ui.ServiceActivity1;
 import com.example.free.mymvpdemo.ui.ServiceActivity2;
 
@@ -43,5 +45,12 @@ public class Nav {
         } else {
             ToastUtils.showShort("无控件绑定 MyService ");
         }
+    }
+
+    public static void toAIDLActivity(Activity activity) {
+        activity.startActivity(new Intent(activity, AIDLActivity.class));
+    }
+    public static void bindAIDLService(Activity activity, ServiceConnection serviceConnection) {
+        activity.bindService(new Intent(activity, AIDLService.class), serviceConnection, Context.BIND_AUTO_CREATE);
     }
 }

@@ -35,7 +35,14 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ui.JNIActivity"></activity>
+        <activity android:name=".ui.JNIActivity" />
+
+        <service
+            android:name=".service.AIDLService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.AIDLActivity"></activity>
     </application>
 
 </manifest>
