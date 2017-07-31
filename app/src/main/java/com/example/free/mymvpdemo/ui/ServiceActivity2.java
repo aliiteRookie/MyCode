@@ -70,4 +70,10 @@ public class ServiceActivity2 extends BaseActivity {
             unbindService(serviceConnection);
     }
 
+    @Override
+    protected void onDestroy() {
+        LogUtils.e("onDestroy");
+        super.onDestroy();
+        unbindService(serviceConnection);
+    }
 }
