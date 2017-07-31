@@ -17,16 +17,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StaggeredHomeAdapter extends
-		RecyclerView.Adapter<StaggeredHomeAdapter.MyViewHolder>
-{
+		RecyclerView.Adapter<StaggeredHomeAdapter.MyViewHolder> {
 
 	private List<String> mDatas;
 	private LayoutInflater mInflater;
 
 	private List<Integer> mHeights;
 
-	public interface OnItemClickLitener
-	{
+	public interface OnItemClickLitener {
 		void onItemClick(View view, int position);
 
 		void onItemLongClick(View view, int position);
@@ -34,13 +32,11 @@ public class StaggeredHomeAdapter extends
 
 	private OnItemClickLitener mOnItemClickLitener;
 
-	public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener)
-	{
+	public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener) {
 		this.mOnItemClickLitener = mOnItemClickLitener;
 	}
 
-	public StaggeredHomeAdapter(Context context, List<String> datas)
-	{
+	public StaggeredHomeAdapter(Context context, List<String> datas) {
 		mInflater = LayoutInflater.from(context);
 		mDatas = datas;
 
@@ -52,16 +48,13 @@ public class StaggeredHomeAdapter extends
 	}
 
 	@Override
-	public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
-	{
-		MyViewHolder holder = new MyViewHolder(mInflater.inflate(
-				R.layout.item_staggered_home, parent, false));
+	public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+		MyViewHolder holder = new MyViewHolder(mInflater.inflate(R.layout.item_staggered_home, parent, false));
 		return holder;
 	}
 
 	@Override
-	public void onBindViewHolder(final MyViewHolder holder, final int position)
-	{
+	public void onBindViewHolder(final MyViewHolder holder, final int position) {
 		LayoutParams lp = holder.tv.getLayoutParams();
 		lp.height = mHeights.get(position);
 		
@@ -69,23 +62,18 @@ public class StaggeredHomeAdapter extends
 		holder.tv.setText(mDatas.get(position));
 
 		// 如果设置了回调，则设置点击事件
-		if (mOnItemClickLitener != null)
-		{
-			holder.itemView.setOnClickListener(new OnClickListener()
-			{
+		if (mOnItemClickLitener != null) {
+			holder.itemView.setOnClickListener(new OnClickListener() {
 				@Override
-				public void onClick(View v)
-				{
+				public void onClick(View v) {
 					int pos = holder.getLayoutPosition();
 					mOnItemClickLitener.onItemClick(holder.itemView, pos);
 				}
 			});
 
-			holder.itemView.setOnLongClickListener(new OnLongClickListener()
-			{
+			holder.itemView.setOnLongClickListener(new OnLongClickListener() {
 				@Override
-				public boolean onLongClick(View v)
-				{
+				public boolean onLongClick(View v) {
 					int pos = holder.getLayoutPosition();
 					mOnItemClickLitener.onItemLongClick(holder.itemView, pos);
 					removeData(pos);
@@ -96,34 +84,26 @@ public class StaggeredHomeAdapter extends
 	}
 
 	@Override
-	public int getItemCount()
-	{
+	public int getItemCount() {
 		return mDatas.size();
 	}
 
-	public void addData(int position)
-	{
+	public void addData(int position) {
 		mDatas.add(position, "Insert One");
 		mHeights.add( (int) (100 + Math.random() * 300));
 		notifyItemInserted(position);
 	}
 
-	public void removeData(int position)
-	{
+	public void removeData(int position) {
 		mDatas.remove(position);
 		notifyItemRemoved(position);
 	}
 
-	class MyViewHolder extends ViewHolder
-	{
-
+	class MyViewHolder extends ViewHolder {
 		TextView tv;
-
-		public MyViewHolder(View view)
-		{
+		public MyViewHolder(View view) {
 			super(view);
 			tv = (TextView) view.findViewById(R.id.id_num);
-
 		}
 	}
 }

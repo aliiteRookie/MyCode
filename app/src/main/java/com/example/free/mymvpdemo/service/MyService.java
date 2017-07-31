@@ -1,4 +1,4 @@
-package com.example.free.mymvpdemo.ui;
+package com.example.free.mymvpdemo.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import com.blankj.utilcode.util.LogUtils;
 public class MyService extends Service {
 
     public MyService() {
+        LogUtils.e("constructor MyService");
     }
 
     @Override
@@ -25,6 +26,12 @@ public class MyService extends Service {
     public IBinder onBind(Intent intent) {
         LogUtils.e("onBind");
         return null;
+    }
+
+    @Override
+    public void onRebind(Intent intent) {
+        LogUtils.e("onRebind");
+        super.onRebind(intent);
     }
 
     @Override
@@ -52,4 +59,7 @@ public class MyService extends Service {
         super.onDestroy();
         LogUtils.e("onDestroy() executed");
     }
+
+
+
 }

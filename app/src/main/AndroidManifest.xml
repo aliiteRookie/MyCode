@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,14 +24,18 @@
         <activity android:name=".ui.StaggeredGridLayoutActivity" />
         <activity android:name=".ui.HandlerActivity" />
         <activity android:name=".ui.BaseActivity" />
-        <activity android:name=".ui.MyService" />
+        <activity android:name=".ui.ServiceActivity"/>
+        <activity android:name=".ui.ServiceActivity2"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimationTheme"
+            />
+
 
         <service
-            android:name=".ui.MyService"
+            android:name=".service.MyService"
             android:enabled="true"
             android:exported="true" />
-
-        <activity android:name=".ui.ServiceActivity"></activity>
     </application>
 
 </manifest>
