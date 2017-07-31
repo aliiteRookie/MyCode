@@ -48,8 +48,9 @@ public class ServiceActivity2 extends BaseActivity {
 
     @OnClick(R.id.bind_service)
     public void bindService() {
-        MyService.isBind = Nav.bindMyService(ServiceActivity2.this, serviceConnection);
+        Nav.bindMyService(ServiceActivity2.this, serviceConnection);
     }
+
 
     ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
@@ -65,15 +66,15 @@ public class ServiceActivity2 extends BaseActivity {
 
     @OnClick(R.id.unbind_service)
     public void unBindService() {
-        if (MyService.isBind){
-            Nav.unBindMyService(ServiceActivity2.this, serviceConnection);
-        }
+        Nav.unBindMyService(ServiceActivity2.this, serviceConnection);
     }
 
     @Override
     protected void onDestroy() {
         LogUtils.e("onDestroy");
         super.onDestroy();
+
+        //不添加下面的方法的话 在onDestroy的时候会引起内存泄漏
         Nav.unBindMyService(ServiceActivity2.this, serviceConnection);
     }
 }

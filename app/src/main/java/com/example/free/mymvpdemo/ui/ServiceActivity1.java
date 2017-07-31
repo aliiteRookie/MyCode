@@ -54,7 +54,8 @@ public class ServiceActivity1 extends BaseActivity {
 
     @OnClick(R.id.bind_service)
     public void bindService() {
-        MyService.isBind = Nav.bindMyService(ServiceActivity1.this, serviceConnection);
+        Nav.bindMyService(ServiceActivity1.this, serviceConnection);
+        LogUtils.e("bindServiceClick, bindServiceStatus:" + MyService.isBind);
     }
 
     ServiceConnection serviceConnection = new ServiceConnection() {
@@ -71,9 +72,7 @@ public class ServiceActivity1 extends BaseActivity {
 
     @OnClick(R.id.unbind_service)
     public void unBindService() {
-        if (MyService.isBind) {
-            Nav.unBindMyService(ServiceActivity1.this, serviceConnection);
-        }
+        Nav.unBindMyService(ServiceActivity1.this, serviceConnection);
     }
 
 

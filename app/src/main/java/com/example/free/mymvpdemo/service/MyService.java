@@ -11,7 +11,7 @@ import com.blankj.utilcode.util.LogUtils;
 
 public class MyService extends Service {
 
-    public static boolean isBind = false;
+    public static boolean isBind = false; //查看本Service是否是绑定状态
 
     public MyService() {
         LogUtils.e("constructor MyService");
