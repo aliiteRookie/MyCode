@@ -3,8 +3,6 @@ package com.example.free.mymvpdemo.manager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.free.mymvpdemo.R;
-
 import butterknife.ButterKnife;
 
 public class BaseActivity extends AppCompatActivity {

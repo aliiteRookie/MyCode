@@ -1,18 +1,28 @@
 package com.example.free.mymvpdemo.ui;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.free.mymvpdemo.R;
+import com.example.free.mymvpdemo.manager.BaseActivity;
+
+import butterknife.BindView;
 
 /**
- *  JNI问题的测试
+ * JNI问题的测试
  */
-public class JNIActivity extends AppCompatActivity {
+public class JNIActivity extends BaseActivity {
+
+    @BindView(R.id.textView)
+    TextView textView;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jni);
+    protected int getLayoutId() {
+        return R.layout.activity_jni;
+    }
+
+    @Override
+    protected void initData() {
+//        textView.setText(myJNI.sayHello());
     }
 }
