@@ -31,6 +31,8 @@ public class MainActivity extends BaseActivity {
     Button aidlControl;
     @BindView(R.id.jni_control)
     Button jniControl;
+    @BindView(R.id.eventBus)
+    Button eventBus;
 
     @Override
     protected int getLayoutId() {
@@ -75,5 +77,10 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.jni_control)
     public void jniControl() {
         Nav.toJNIActivity(this);
+    }
+
+    @OnClick(R.id.eventBus)
+    public void eventBus() {
+        Nav.toEventBusActivity(this);
     }
 }

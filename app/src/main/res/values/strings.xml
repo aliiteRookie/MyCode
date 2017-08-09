@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyMvpDemo</string>
     <string name="change_show_mode">切换显示模式</string>
+    <string name="click">点击</string>
 </resources>

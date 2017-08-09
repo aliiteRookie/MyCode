@@ -51,6 +51,12 @@
         android:text="JNI"
         android:id="@+id/jni_control"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EventBus"
+        android:id="@+id/eventBus"
+        />
 
 </LinearLayout>
 
