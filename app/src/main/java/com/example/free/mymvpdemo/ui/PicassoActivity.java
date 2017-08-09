@@ -1,8 +1,7 @@
 package com.example.free.mymvpdemo.ui;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.example.free.mymvpdemo.R;

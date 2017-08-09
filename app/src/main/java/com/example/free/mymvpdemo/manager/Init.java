@@ -1,7 +1,5 @@
 package com.example.free.mymvpdemo.manager;
 
-import android.content.Context;
-
 /**
  * Created by free on 2017/8/8.
  */

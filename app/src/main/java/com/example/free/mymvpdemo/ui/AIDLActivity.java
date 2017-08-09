@@ -2,10 +2,8 @@ package com.example.free.mymvpdemo.ui;
 
 import android.content.ComponentName;
 import android.content.ServiceConnection;
-import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.blankj.utilcode.util.LogUtils;
@@ -15,7 +13,6 @@ import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class AIDLActivity extends BaseActivity {

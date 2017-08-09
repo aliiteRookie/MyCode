@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-
 import com.example.free.mymvpdemo.R;
 import com.example.free.mymvpdemo.adapter.StaggeredHomeAdapter;
 

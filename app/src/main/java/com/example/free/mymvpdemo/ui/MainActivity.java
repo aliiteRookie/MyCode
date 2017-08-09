@@ -1,7 +1,6 @@
 package com.example.free.mymvpdemo.ui;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.Button;
 
 import com.example.free.mymvpdemo.R;
@@ -9,7 +8,6 @@ import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {

@@ -1,7 +1,6 @@
 package com.example.free.mymvpdemo.ui;
 
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,7 +9,6 @@ import com.example.free.mymvpdemo.helper.Nav;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class EventbusActivity extends BaseActivity {
 

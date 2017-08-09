@@ -1,6 +1,5 @@
 package com.example.free.mymvpdemo.ui.eventbus;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,11 +8,8 @@ import com.example.free.mymvpdemo.bean.eventBean.MyAction;
 import com.example.free.mymvpdemo.manager.BaseActivity;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class EventBus2 extends BaseActivity {
 
